@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="max-width:960px;margin:16px auto;padding:12px;border:1px solid #d8dee6;background:#fff;">This guide needs JavaScript: the checklist, filters and spoiler setting are all done in your browser, with no network. Enable JavaScript and reload.</p></noscript>
+<header class="masthead">
+  <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; works fully offline</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">All 55 trophies with their official names, descriptions and grades, a roadmap to the platinum, and a checklist that saves in your browser.</p>
+  <p class="honest" id="honest-note"></p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+    <p class="progress-text" id="progress-text">0 of 55 earned</p>
+  </div>
+</header>
+
+<section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+  <h2>Roadmap to the platinum</h2>
+  <p class="roadmap-intro">About 200 hours in a single playthrough. PowerPyx rates the platinum 4/10; the hardest trophy is <strong>A Long Road</strong> (100% Completion). Sources: <a href="https://gamemapa.com/en/gta-6/guides/gta-6-trophy-achievement-list/">GameMapa</a>, <a href="https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap">Push Square</a>.</p>
+  <ol class="stages">
+    <li>
+      <h3>Stage 1 — Play the story, Chapters 1–5 <span class="stage-time">60–80 hours</span></h3>
+      <p>Play the story and pick up side missions as they appear. Scan every new vehicle with the WAiNK app as you go. <strong>Do the first meditation in Chapter 1</strong> — it is the one missable trophy (see <em>Positive Mental Attitude</em> below). Story trophies and the stranger questlines unlock along the way.</p>
+      <p class="stage-trophies" id="stage-1-trophies"></p>
+    </li>
+    <li>
+      <h3>Stage 2 — The 100% Completion checklist <span class="stage-time">about 100 hours</span></h3>
+      <p>After the final mission the checklist appears under Progress. It asks for almost everything — 15 of the 18 card sets, 70 of the 80 Challenges, every robbery, every shooting range and drone race — but not literally everything. Work through it with the filters below.</p>
+      <p class="stage-trophies" id="stage-2-trophies"></p>
+    </li>
+    <li>
+      <h3>Stage 3 — Strangers &amp; Freaks and cleanup <span class="stage-time">about 10 hours</span></h3>
+      <p>The checklist does not ask for the Strangers &amp; Freaks strands, so they are usually what is left, together with stray trophies and the five hidden trophies nobody has solved yet. Finish the 8 strands, then the platinum pops.</p>
+      <p class="stage-trophies" id="stage-3-trophies"></p>
+    </li>
+  </ol>
+  <p class="missable-callout" id="missable-callout"></p>
+</section>
+
+<section class="controls" aria-label="Tracker controls">
+  <div class="control-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or guide text…" autocomplete="off"></label>
+    <label>Kind
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="online">Online</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="check-label"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+    <label class="check-label"><input id="earned-only" type="checkbox"> Earned only</label>
+  </div>
+  <div class="control-row">
+    <button id="export" type="button">Export progress</button>
+    <label class="import-label">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset progress</button>
+    <span class="online-note" id="online-note"></span>
+  </div>
+  <p class="count-line" id="count-line"></p>
+</section>
+
+<main>
+  <ul class="trophy-list" id="trophy-list"></ul>
+  <p class="empty-note" id="empty-note" hidden>No trophies match these filters.</p>
+</main>
+
+<footer>
+  <p>Guide text is written for this page, in its own words, with the source of each fact named beside it. Trophy names and descriptions are shown as PlayStation lists them. No Rockstar artwork or logo is used. No online trophies exist in this game — every one of the 55 is single-player.</p>
+  <p class="footer-sources" id="footer-sources"></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
